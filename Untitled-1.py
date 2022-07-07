@@ -3,11 +3,11 @@ import pandas as pd
 import streamlit as st
 
 # %%
-#count_task = "offers_statuses (3).txt"
+count_task = "offers_statuses (3).txt"
 
 # %%
-#df = pd.read_csv(count_task, sep='|')
-df = pd.read_csv('/Users/arturfattahov/Downloads/Telegram Desktop/offers_statuses (3).txt', sep='|')
+df = pd.read_csv(count_task, sep='|')
+#df = pd.read_csv('/Users/arturfattahov/Downloads/Telegram Desktop/offers_statuses (3).txt', sep='|')
 
 # %%
 df = df.dropna()
