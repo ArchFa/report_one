@@ -60,7 +60,6 @@ col4.metric("Admins", task_admins_j, "-261")
 st.subheader("Процент задач создаваемых через приложение")
 
 # %%
-col1= st.columns(1)
-col1.metric("Процент задач через приложения", "2.12%", "-0.25%")
+st.metric(label="Процент задач через приложения", value="2.12%", delta="-0.25%")
 
 
