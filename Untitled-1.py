@@ -45,15 +45,6 @@ task_admins_j = df_june['platform'].value_counts()[0]
 task_andr_j = df_june['platform'].value_counts()[1]
 task_ios_j = df_june['platform'].value_counts()[2]
 
-task_admins_m = df_may['platform'].value_counts()[0]
-task_andr_m = df_may['platform'].value_counts()[1]
-task_ios_m = df_may['platform'].value_counts()[2]
-
-
-diff_1 = task_admins_j - task_admins_m
-diff_2 = task_andr_j - task_andr_m
-diff_3 = task_ios_j - task_ios_m
-
 # %%
 st.title("Отчет UrgY")
 st.subheader("Количество созданных задач")
@@ -64,8 +55,7 @@ st.metric(label="Количество созданных задач за июн�
 # %%
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Количество созданных задач за июнь", all_task_june, difference_task)
-col2.metric("Количество созданных задач за июнь Android", task_andr_j, diff_2)
-col3.metric("Количество созданных задач за июнь iOS", task_ios_j, diff_3)
-col4.metric("Количество созданных задач за июнь Admins", task_admins_j,diff_1)
-
+col2.metric("Количество созданных задач за июнь Android", task_andr_j, "10")
+col3.metric("Количество созданных задач за июнь iOS", task_ios_j, "-21")
+col4.metric("Количество созданных задач за июнь Admins", task_admins_j, "-261")
 
