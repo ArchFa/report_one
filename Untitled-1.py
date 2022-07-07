@@ -25,6 +25,7 @@ df['platform'] = df['platform'].str.strip()
 # %%
 df_june = df[df['offer_created_at'] > '2022-05-31']
 df_may = df[df['offer_created_at'] < '2022-05-31']
+##
 
 # %%
 all_task_june = df_june['offer_id'].nunique()
