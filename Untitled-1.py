@@ -1,7 +1,6 @@
 # %%
 import pandas as pd
 import streamlit as st
-import plotly.express as px
 
 # %%
 count_task = "offers_statuses (3).txt"
