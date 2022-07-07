@@ -50,7 +50,7 @@ st.title("Отчет UrgY")
 st.subheader("Количество созданных задач")
 
 # %%
-col1, col2, col3, col4, col5 = st.columns(4)
+col1, col2, col3, col4, col5 = st.columns(5)
 col1.metric("All", all_task_june, difference_task)
 col2.metric("Android", task_andr_j, "10")
 col3.metric("iOS", task_ios_j, "-21")
