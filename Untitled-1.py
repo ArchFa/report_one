@@ -1,7 +1,7 @@
 # %%
 import pandas as pd
 import streamlit as st
-import matplotlib.pyplot as plt
+import plotly.express as px
 
 # %%
 count_task = "offers_statuses (3).txt"
@@ -25,7 +25,6 @@ df['platform'] = df['platform'].str.strip()
 # %%
 df_june = df[df['offer_created_at'] > '2022-05-31']
 df_may = df[df['offer_created_at'] < '2022-05-31']
-##
 
 # %%
 all_task_june = df_june['offer_id'].nunique()
@@ -64,16 +63,8 @@ st.subheader("Количество созданных задач")
 st.metric(label="Количество созданных задач за июнь", value=all_task_june, delta=difference_task)
 
 # %%
-labels = 'Frogs', 'Hogs', 'Dogs', 'Logs'
-sizes = [15, 30, 45, 10]
-explode = (0, 0.1, 0, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
-
-fig1, ax1 = plt.subplots()
-ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
-        shadow=True, startangle=90)
-ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-
-st.pyplot(fig1)
+fig = px.pie(df, values='count_responds', names='platform', title='НАЗВАНИЕ ДИАГРАММЫ')
+fig.show()
 
 # %%
 
