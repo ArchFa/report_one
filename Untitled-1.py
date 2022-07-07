@@ -19,6 +19,7 @@ df.offer_created_at = df.offer_created_at.values.astype('M8[D]')
 df['count_responds'] = df['count_responds'].astype(int)
 df['count_prematch'] = df['count_prematch'].astype(int)
 
+
 df['platform'] = df['platform'].str.strip()
 
 # %%
