@@ -2,7 +2,6 @@
 import pandas as pd
 import streamlit as st
 
-
 # %%
 count_task = "offers_statuses (3).txt"
 
