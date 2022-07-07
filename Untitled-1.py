@@ -51,9 +51,16 @@ st.subheader("Количество созданных задач")
 
 # %%
 col1, col2, col3, col4 = st.columns(4)
-col1.metric("Количество созданных задач за июнь", all_task_june, difference_task)
-col2.metric("Количество созданных задач за июнь Android", task_andr_j, "10")
-col3.metric("Количество созданных задач за июнь iOS", task_ios_j, "-21")
-col4.metric("Количество созданных задач за июнь Admins", task_admins_j, "-261")
+col1.metric("All", all_task_june, difference_task)
+col2.metric("Android", task_andr_j, "10")
+col3.metric("iOS", task_ios_j, "-21")
+col4.metric("Admins", task_admins_j, "-261")
+
+# %%
+st.subheader("Процент задач создаваемых через приложение")
+
+# %%
+col1= st.columns(1)
+col1.metric("Процент задач через приложения", "2.12%", "-0.25%")
 
 
